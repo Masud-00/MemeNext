@@ -23,10 +23,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
         loadmeme()
-
-
     }
     private fun loadmeme(){
         // Instantiate the RequestQueue.
@@ -34,7 +31,7 @@ class MainActivity : AppCompatActivity() {
         val url = "https://meme-api.herokuapp.com/gimme"
         val imageView: ImageView = findViewById(R.id.imageView)
         findViewById<ProgressBar>(R.id.progressbar).visibility =View.VISIBLE
-// Request a string response from the provided URL.
+        // Request a string response from the provided URL.
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.GET, url,null,
             { response ->
